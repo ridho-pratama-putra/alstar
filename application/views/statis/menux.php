@@ -10,6 +10,9 @@
     function login (){
         window.location = '<?=base_url()?>login';
     }
+    function logout() {
+        window.location = '<?=base_url()?>logout';
+    }
 </script>
   <!-- Navigation -->
   <nav class="navbar navbar-default fixed-to-top" role="navigation" style="display: block;">
@@ -23,7 +26,7 @@
         </button>
 
         <!-- Logo text or image -->
-        <a class="navbar-brand" href="index.php">PORKAB MALANG VII</a>
+        <a class="navbar-brand" href="<?=base_url()?>">PORKAB MALANG VII</a>
 
       </div>
       <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
@@ -38,11 +41,19 @@
                 <a href="#tentangkami">Tentang Kami</a>
             </li>
             <li>
-                <a href="" onclick="login()">Login Admin</a>
-            </li>
-            <li>
                 <a href="#contact">Contact</a>
             </li>
+            <?php if ($this->session->userdata('loginSession') == array()) { ?>
+            <li>
+                <a href="" onclick="login()">Login Admin</a>
+            </li>
+            <?php } else{ ?>
+              <li>
+                <a href="" onclick="logout()">Logout</a>
+              </li>
+            <?php
+            }?>
+
         </ul>
       </div>
     </div>

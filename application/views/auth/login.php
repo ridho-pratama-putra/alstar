@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
 
-          <form action="login.php" method="post" class="form-horizontal contactForm" role="form">
+          <form action="<?=base_url()?>submit-login" method="post" class="form-horizontal" role="form">
             <div class="col-md-offset-2 col-md-8">
               <div class="form-group">
                 <label>Username</label>

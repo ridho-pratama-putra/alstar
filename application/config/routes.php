@@ -56,32 +56,17 @@ $route['translate_uri_dashes'] = FALSE;
 /*******************************************************AUTH****************************************************************/
 $route['beranda']					= 'Home';
 $route['login']						= 'Auth/login/';
+$route['submit-login']				= 'Auth/submitLogin/';
 $route['logout']					= 'Auth/logout/';
 $route['registrasi']				= 'Auth/registrasi/';
 $route['registrasi-proses']			= 'Auth/registrasiProses/';
 /*******************************************************END AUTH****************************************************************/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*******************************************************Admin****************************************************************/
+$route['semua-kategori']				= 'Admin/allCategory/';
+$route['kategori']						= 'Admin/category';
+$route['hapus/(:any)/(:num)']			= 'Admin/hapusParticipant/$1/$2';
+$route['edit/(:num)']			= 'Admin/editParticipant/$1';
+$route['submit-edit']			= 'Admin/submitEdit';
+/*******************************************************END Admin****************************************************************/
